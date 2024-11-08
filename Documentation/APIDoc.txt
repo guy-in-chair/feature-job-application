@@ -1,0 +1,80 @@
+TeknorixAPI Documentation
+1. Create Job
+Endpoint: POST /api/jobs
+Description: Creates a new job entry.
+
+Request
+Body: JobDto
+title (string): The job title.
+description (string): Job description.
+closingDate (DateTime): Job closing date.
+Other necessary fields as per JobDto.
+Response
+Status: 201 Created
+Body:
+json
+Copy code
+{
+  "id": int,
+  "title": string,
+  "description": string,
+  "postedDate": DateTime,
+  "closingDate": DateTime,
+  ...
+}
+2. Get Job By ID
+Endpoint: GET /api/jobs/{id}
+Description: Retrieves a job by its ID.
+
+Parameters
+Path Variable:
+id (int): Job ID.
+Response
+Status: 200 OK if the job exists, 404 Not Found if the job is not found.
+Body:
+json
+Copy code
+{
+  "id": int,
+  "code": string,
+  "title": string,
+  "description": string,
+  "postedDate": DateTime,
+  "closingDate": DateTime,
+  "department": {
+    "id": int,
+    "name": string,
+    ...
+  },
+  "location": {
+    "id": int,
+    "name": string,
+    ...
+  }
+}
+3. Update Job
+Endpoint: PUT /api/jobs/{id}
+Description: Updates an existing job entry.
+
+Parameters
+Path Variable:
+id (int): Job ID.
+Request
+Body: JobDto
+Updated job details as defined in JobDto.
+Response
+Status: 200 OK
+4. Get Paginated Jobs
+Endpoint: POST /api/jobs/list
+Description: Retrieves a paginated list of jobs.
+
+Request
+Body: JobListRequestDto
+pageNo (int): Page number.
+pageSize (int): Number of jobs per page.
+q (string, optional): Search query.
+locationId (int, optional): Filter by location.
+departmentId (int, optional): Filter by department.
+Response
+Status: 200 OK
+Body: Array of job details matching the JobMetaDto structure.
