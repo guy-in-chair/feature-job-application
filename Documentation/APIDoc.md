@@ -31,7 +31,6 @@ This documentation provides an overview of the API endpoints available in the Te
 201 Created: Returns the newly created job with a link to retrieve it by ID.
 201 http://localhost/api/v1/jobs/1
 ```
-```
 ```json
 
 {
@@ -77,7 +76,7 @@ This documentation provides an overview of the API endpoints available in the Te
   "postedDate": "2021-08-30T18:43:31.877Z",
   "closingDate": "2021-08-30T18:43:31.877Z"
 }
-
+```
 
 ### Update Job
 
@@ -98,7 +97,7 @@ This documentation provides an overview of the API endpoints available in the Te
   "locationId": 3,
   "closingDate": "2025-01-15"
 }
-
+```
 #### Response
 - **200 OK:** 
 
@@ -118,6 +117,7 @@ This documentation provides an overview of the API endpoints available in the Te
   "locationId": 3,
   "departmentId": 2
 }
+```
 #### Response
 ```json
 {
