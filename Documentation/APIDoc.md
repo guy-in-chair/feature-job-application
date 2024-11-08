@@ -26,11 +26,11 @@ This documentation provides an overview of the API endpoints available in the Te
   "locationId": 3,
   "closingDate": "2024-12-31"
 }
-
+```
 #### Response
 201 Created: Returns the newly created job with a link to retrieve it by ID.
-```
 201 http://localhost/api/v1/jobs/1
+```
 ```
 ```json
 
@@ -43,7 +43,7 @@ This documentation provides an overview of the API endpoints available in the Te
   "closingDate": "2024-12-31",
   "postedDate": "2024-11-01"
 }
-
+```
 ### Get Job by ID
 
 **Endpoint:** `GET /api/v1/jobs/{id}`  
