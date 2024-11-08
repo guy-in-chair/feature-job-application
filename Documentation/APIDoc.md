@@ -1,6 +1,6 @@
 # TeknorixAPI Documentation
 
-This documentation provides an overview of the API endpoints available in the TeknorixAPI project. Each endpoint is designed to handle job-related operations, including creating, retrieving, updating, and listing jobs. DB scripts can be found in [DBScripts.sql](/DBScripts.sql)
+This documentation provides an overview of the API endpoints available in the TeknorixAPI project. Each endpoint is designed to handle job-related operations, including creating, retrieving, updating, and listing jobs. DB scripts can be found in [DBScripts.sql](/Documentation/DBScripts.sql)
 
 ## Table of Contents
 - [Create Job](#create-job)
